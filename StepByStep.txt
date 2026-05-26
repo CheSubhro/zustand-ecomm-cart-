@@ -1,0 +1,22 @@
+
+🚀 Zustand Learning Roadmap: Step-by-Step Guide
+Phase 1: Local State Management (Basic Setup)
+1. Install the Dependency Run the following command in your project terminal to install Zustand:
+
+Bash
+npm install zustand
+
+2. Initialize the Global Store Create a central store file at src/store/useCartStore.js to manage your cart's state and core logic.
+
+3. Build the Cart UI Component Create the Cart view component at src/features/cart/CartItem.jsx to display selected items and handle quantity updates.
+
+4. Build the Product List Component Create a catalog component at src/features/products/ProductList.jsx to render your products and handle the "Add to Cart" functionality.
+
+5. Update the Root Application Modify src/App.jsx to import and render both the ProductList and CartItem components within your main layout.
+
+Phase 2: Asynchronous Data Handling (API Integration)
+Now, let's transition from local mock data to fetching real-world data from an external API.
+
+1. Update the Store with Async Actions Modify src/store/useCartStore.js to include asynchronous logic (async/await), along with global isLoading and error states to track the API request lifecycle.
+
+2. Refactor the Product List for API Fetching Update src/features/products/ProductList.jsx using React's useEffect hook to trigger the store's fetch action as soon as the component mounts, mapping the dynamic API data directly to your UI.
