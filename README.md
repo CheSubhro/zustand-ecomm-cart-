@@ -1,16 +1,49 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# 🛒 Zustand Shopping Cart with API Integration
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A lightweight, high-performance e-commerce mini-application built with React (Vite) and Zustand for state management. This project demonstrates how to handle global local state, persistent state caching, and asynchronous API integration without using heavy boilerplate frameworks like Redux.
 
-## React Compiler
+✨ Features
+Global State Management: Centralized cart and product management using Zustand hooks.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Zero Prop Drilling: Components access store states directly, ensuring clean and maintainable code.
 
-## Expanding the ESLint configuration
+Asynchronous Data Fetching: Integrates with FakeStoreAPI to fetch real-world product catalogs dynamically.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+State Persistence: Built-in Zustand middleware to automatically sync cart data with browser localStorage.
+
+Render Tuning & Performance: Optimized state tracking to avoid unnecessary component re-renders.
+
+<img width="1366" height="1298" alt="screencapture-localhost-5173-2026-05-26-13_13_40" src="https://github.com/user-attachments/assets/78d14229-c832-4d19-b489-d087e48437f6" />
+
+
+🛠️ Project Structure
+Plaintext
+src/
+├── components/          # Shared layout components
+├── features/
+│   ├── cart/
+│   │   └── CartItem.jsx    # Handles cart items display & quantity updates
+│   └── products/
+│       └── ProductList.jsx # Fetches and displays products from API
+├── store/
+│   └── useCartStore.js     # Centralized Zustand store with async actions
+├── App.jsx                 # Root application setup
+└── main.jsx               # Application entry point
+🚀 Getting Started
+1. Installation
+Clone your repository or navigate to your project directory and run the following commands:
+
+Bash
+# Install dependencies
+npm install
+
+# Install Zustand state management library
+npm install zustand
+2. Run the Development Server
+To launch the application locally, execute:
+
+Bash
+npm run dev
+Open the local URL (usually http://localhost:5173) in your browser to view the application.
